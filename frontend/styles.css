@@ -1,4 +1,6 @@
-/* RESET BÁSICO */
+/* =========================
+   RESET
+========================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,13 +8,18 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* =========================
+   BODY
+========================= */
 body {
   background: #f4f6f8;
-  padding: 16px;
+  padding: 12px;
   color: #222;
 }
 
-/* TITULOS */
+/* =========================
+   TITULOS
+========================= */
 h1 {
   text-align: center;
   margin-bottom: 16px;
@@ -22,36 +29,38 @@ h2 {
   margin-bottom: 12px;
 }
 
-/* BOTONES */
+/* =========================
+   BOTONES
+========================= */
 button {
+  width: 100%;
   background: #2563eb;
   color: white;
   border: none;
   padding: 12px;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 15px;
-}
-
-button:hover {
-  background: #1e4fd6;
 }
 
 button:active {
   transform: scale(0.98);
 }
 
-/* BOTÓN AGREGAR */
+/* =========================
+   BOTÓN AGREGAR
+========================= */
 #btnAgregar {
-  width: 100%;
   margin-bottom: 16px;
 }
 
-/* FORMULARIO */
+/* =========================
+   FORMULARIO
+========================= */
 #formulario {
   background: white;
   padding: 16px;
-  border-radius: 12px;
+  border-radius: 14px;
   margin-bottom: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
@@ -60,109 +69,117 @@ button:active {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 14px;
 }
 
 #guardar {
-  width: 100%;
   margin-top: 8px;
 }
 
-/* LISTA DE PRODUCTOS */
+/* =========================
+   LISTA PRODUCTOS
+========================= */
 #listaProductos {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
 }
 
-/* TARJETA PRODUCTO */
+/* =========================
+   TARJETA PRODUCTO
+========================= */
 .producto {
   background: white;
-  padding: 14px;
-  border-radius: 12px;
+  padding: 16px;
+  border-radius: 14px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
   cursor: pointer;
-  transition: transform 0.15s ease;
-}
-
-.producto:hover {
-  transform: scale(1.02);
 }
 
 .producto strong {
   font-size: 16px;
 }
 
-/* DETALLE */
+/* =========================
+   MODAL DETALLE
+========================= */
 #detalle {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 16px;
+}
+
+/* mostrar solo cuando NO está oculto */
+#detalle:not(.oculto) {
+  display: flex;
 }
 
 #detalle > div {
   background: white;
   width: 100%;
   max-width: 420px;
-  border-radius: 14px;
+  border-radius: 16px;
   padding: 16px;
 }
 
+/* =========================
+   INFO DETALLE
+========================= */
 #detalleInfo {
   margin-bottom: 12px;
   line-height: 1.5;
 }
 
-/* INPUT STOCK */
+/* =========================
+   INPUT STOCK
+========================= */
 #cantidadStock {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid #ccc;
 }
 
-/* BOTONES DETALLE */
-#sumarStock,
-#restarStock {
-  width: 100%;
+/* =========================
+   BOTONES DETALLE
+========================= */
+#sumarStock {
   margin-bottom: 8px;
 }
 
 #restarStock {
   background: #dc2626;
-}
-
-#restarStock:hover {
-  background: #b91c1c;
+  margin-bottom: 8px;
 }
 
 #cerrarDetalle {
   background: #6b7280;
 }
 
-#cerrarDetalle:hover {
-  background: #4b5563;
-}
-
-/* OCULTAR */
+/* =========================
+   OCULTO
+========================= */
 .oculto {
   display: none;
 }
 
-/* DESKTOP */
+/* =========================
+   DESKTOP
+========================= */
 @media (min-width: 768px) {
   body {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
   }
 
   #listaProductos {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 }
