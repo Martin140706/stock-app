@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Productos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Productos</h1>
+
+    <button id="btnAgregar">Agregar producto</button>
+
+    <div id="formulario" class="oculto">
+      <h2>Nuevo producto</h2>
+
+      <input id="nombre" placeholder="Nombre del producto" />
+      <input id="descripcion" placeholder="Descripción" />
+      <input id="codigoInterno" placeholder="Código interno" />
+      <input id="codigoBarras" placeholder="Código de barras" />
+      <button id="btnEscanear">Escanear código</button>
+
+      <video id="video" class="oculto" autoplay></video>
+
+      <input id="precioVenta" type="number" placeholder="Precio de venta" />
+      <input id="precioCompra" type="number" placeholder="Precio de compra" />
+      <input id="stock" type="number" placeholder="Stock inicial" />
+
+      <button id="guardar">Guardar</button>
+    </div>
+
+    <hr />
+
+    <div id="listaProductos"></div>
+
+    <div id="detalle" class="oculto">
+      <h2>Detalle del producto</h2>
+
+      <p id="detalleInfo"></p>
+
+      <input id="cantidadStock" type="number" placeholder="Cantidad" />
+
+      <button id="sumarStock">Sumar stock</button>
+      <button id="restarStock">Restar stock</button>
+
+      <button id="cerrarDetalle">Cerrar</button>
+    </div>
+
+    <script src="productos.js"></script>
+  </body>
+</html>

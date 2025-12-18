@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 5px 0;
+}
+
+input {
+  display: block;
+  margin: 5px 0;
+  padding: 6px;
+  width: 300px;
+}
+
+.oculto {
+  display: none;
+}
+
+.producto {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.producto:hover {
+  background-color: #f5f5f5;
+}
+#video {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
